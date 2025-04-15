@@ -27,7 +27,7 @@ const { backgroundColor } = Astro.props;
           <a
             class="btn btn-primary btn-lg rounded-pill fs-4 fs-sm-3 fw-bold text-white py-2 px-4"
             href={pages.memberForm.path}
-          >
+          >io
             <span class="px-4">Become a Member</span>
           </a>
         </div>
@@ -43,6 +43,7 @@ const { backgroundColor } = Astro.props;
 
   .background {
     background-color: var(--backgroundColor);
+    padding-inline: 10rem;
   }
 
   h1 {
@@ -58,5 +59,11 @@ const { backgroundColor } = Astro.props;
 
   p {
     max-width: 700px;
+  }
+
+  @media screen and (max-width: 991px) {
+    .background {
+      padding-inline: 2rem;
+    }
   }
 </style>
