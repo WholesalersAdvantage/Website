@@ -65,18 +65,31 @@ const { backgroundColor } = Astro.props;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.4;
+    opacity: 1;
     z-index: 0;
+  }
+
+  .background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
   }
 
   .hero-content {
     position: relative;
     z-index: 2;
+    color: #fff;
   }
 
   h1 {
     max-width: 800px;
     font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
   @media screen and (max-width: 350px) {
@@ -87,6 +100,7 @@ const { backgroundColor } = Astro.props;
 
   p {
     max-width: 800px;  /* Changed from 700px to 800px to match other sections */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   }
 
   @media screen and (max-width: 991px) {
